@@ -6,7 +6,7 @@
 #    By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 18:29:20 by jraymond          #+#    #+#              #
-#    Updated: 2017/12/20 20:12:12 by jraymond         ###   ########.fr        #
+#    Updated: 2018/03/27 18:01:17 by jraymond         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,7 +79,8 @@ SRCS = ft_memset.c \
 				ft_list_push_front.c \
 				ft_list_clear.c \
 				ft_list_print.c \
-				ft_strjoin_free.c
+				ft_strjoin_free.c \
+				ft_lstaddback.c
 
 OBJ = $(SRCS:.c=.o)
 
