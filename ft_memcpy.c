@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 21:05:09 by jraymond          #+#    #+#             */
-/*   Updated: 2017/11/16 16:23:24 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/03/28 13:00:28 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	cdest = (unsigned char*)dest;
 	csrc = (const char*)src;
-	while (n != 0)
+	while (n > 0)
 	{
 		*cdest = *csrc;
 		cdest++;
