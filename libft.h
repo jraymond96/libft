@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 18:29:51 by jraymond          #+#    #+#             */
-/*   Updated: 2018/03/27 17:51:15 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/03/28 09:34:45 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ void					ft_putstr_fd(char const *s, int fd);
 void					ft_putendl_fd(char const *s, int fd);
 void					ft_putnbr_fd(int n, int fd);
 char					*ft_strnstr(const char *s1, const char *s2, size_t n);
-t_bis_list				*ft_create_elem(void *data);
+t_bis_list				*ft_creat_elem(void *data);
 void					ft_list_push_front(t_b_list **begin_list, void *data);
 void					ft_list_push_back(t_b_list *begin_list, void *data);
 void					ft_list_clear(t_b_list **begin_list);
