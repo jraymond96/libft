@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/16 19:31:56 by jraymond          #+#    #+#             */
-/*   Updated: 2017/11/19 20:22:57 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/03/28 09:41:21 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	ft_list_push_back(t_b_list *begin_list, void *data)
 	{
 		while (list && list->next)
 			list = list->next;
-		list->next = ft_create_elem(data);
+		list->next = ft_creat_elem(data);
 	}
 	else
-		begin_list->first_element = ft_create_elem(data);
+		begin_list->first_element = ft_creat_elem(data);
 }
