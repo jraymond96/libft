@@ -6,11 +6,12 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 20:12:29 by jraymond          #+#    #+#             */
-/*   Updated: 2018/03/29 11:32:20 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/03/29 13:27:10 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 t_list	*ft_lstnew(void const *content, size_t content_size)
 {
