@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/15 20:12:29 by jraymond          #+#    #+#             */
-/*   Updated: 2018/03/29 13:27:10 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/03/30 11:52:28 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		new->content = (void*)ft_memalloc(content_size);
+		new->content = (void*)ft_memalloc(content_size + 1);
 		if (new->content == NULL)
 		{
 			free(new);
