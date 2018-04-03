@@ -6,7 +6,7 @@
 #    By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 18:29:20 by jraymond          #+#    #+#              #
-#    Updated: 2018/03/30 19:23:08 by jraymond         ###   ########.fr        #
+#    Updated: 2018/04/03 15:08:53 by jraymond         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,7 +81,6 @@ SRCS = ft_memset.c \
 				ft_list_print.c \
 				ft_strjoin_free.c \
 				ft_lstaddback.c \
-				ft_print_btree.c \
 				ft_newbtree.c \
 				ft_btreeinser_ascii.c \
 				ft_btreedel.c

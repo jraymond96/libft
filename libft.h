@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 18:29:51 by jraymond          #+#    #+#             */
-/*   Updated: 2018/03/30 19:22:43 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/04/03 15:09:25 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,15 @@ typedef struct			s_begin_list
 {
 	t_bis_list			*first_element;
 }						t_b_list;
+
+typedef struct			s_btree
+{
+	void				*ptrdata;
+	size_t				data_size;
+	struct	s_btree		*parent;
+	struct	s_btree		*left;
+	struct	s_btree		*right;
+}						t_btree;
 
 t_list					*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void					ft_lstiter(t_list *lst, void (*f)(t_list *elem));
@@ -105,7 +114,6 @@ void					ft_list_push_back(t_b_list *begin_list, void *data);
 void					ft_list_clear(t_b_list **begin_list);
 void					ft_list_print(t_b_list *begin_list);
 char					*ft_strjoin_free(char const *s1, char const *s2, int i);
-void					ft_print_tree(t_btree *root);
 t_btree					*ft_btreeinser_ascii(t_btree *root, void *data,
 						size_t size_data);
 t_btree 				*ft_newbtree(void const *data, size_t size_data);

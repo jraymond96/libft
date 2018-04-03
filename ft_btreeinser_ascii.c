@@ -6,25 +6,26 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/30 19:14:45 by jraymond          #+#    #+#             */
-/*   Updated: 2018/03/30 19:16:26 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/04/03 15:21:35 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "/Users/jraymond/ft_ls/ft_ls.h"
 
 t_btree	*ft_btreeinser_ascii(t_btree *root, void *data, size_t size_data)
 {
 	t_btree	*elem;
 	t_btree	*parent;
-	int	res;
+	int		i;
 
 	if (!(elem = root))
 		return (ft_newbtree(data, size_data));
 	parent = root;
 	while (elem)
 	{
-		res = ft_strcmp(((t_test *)data)->name, ((t_test *)elem->ptrdata)->name);
-		elem = (res < 0) ? (t_btree *)elem->left : (t_btree *)elem->right;
+		i = ft_strcmp(((t_finfo*)data)->name, ((t_finfo*)elem->ptrdata)->name);
+		elem = (i < 0) ? (t_btree *)elem->left : (t_btree *)elem->right;
 		if (!elem)
 		{
 			elem = parent;
@@ -32,7 +33,7 @@ t_btree	*ft_btreeinser_ascii(t_btree *root, void *data, size_t size_data)
 		}
 		parent = elem;
 	}
-	if (res < 0)
+	if (i < 0)
 		elem->left = (struct s_btree *)ft_newbtree(data, size_data);
 	else
 		elem->right = (struct s_btree *)ft_newbtree(data, size_data);
