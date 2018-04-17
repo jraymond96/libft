@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/30 19:18:10 by jraymond          #+#    #+#             */
-/*   Updated: 2018/03/30 19:21:28 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/04/17 05:16:08 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ t_btree *ft_newbtree(void const *data, size_t size_data)
 			ft_memdel((void **)&new);
 			return (NULL);
 		}
+		ft_bzero(new->ptrdata, size_data);
 		ft_memmove(new->ptrdata, data, size_data);
 		new->data_size = size_data;
 	}
