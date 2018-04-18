@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/30 19:14:45 by jraymond          #+#    #+#             */
-/*   Updated: 2018/04/03 15:21:35 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/04/18 07:11:43 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,35 @@ t_btree	*ft_btreeinser_ascii(t_btree *root, void *data, size_t size_data)
 		elem->left = (struct s_btree *)ft_newbtree(data, size_data);
 	else
 		elem->right = (struct s_btree *)ft_newbtree(data, size_data);
+	elem->parent = (struct s_btree *)parent;
+	return (root);
+}
+
+
+t_btree	*ft_btreeinser_int(t_btree *root, void *data, size_t size_data)
+{
+	t_btree	*elem;
+	t_btree	*parent;
+	time_t	i;
+
+	if (!(elem = root))
+		return (ft_newbtree(data, size_data));
+	parent = root;
+	while (elem)
+	{
+		i = ((t_finfo*)data)->time_n - ((t_finfo*)elem->ptrdata)->time_n;
+		elem = (i < 0) ? (t_btree *)elem->right : (t_btree *)elem->left;
+		if (!elem)
+		{
+			elem = parent;
+			break;
+		}
+		parent = elem;
+	}
+	if (i < 0)
+		elem->right = (struct s_btree *)ft_newbtree(data, size_data);
+	else
+		elem->left = (struct s_btree *)ft_newbtree(data, size_data);
 	elem->parent = (struct s_btree *)parent;
 	return (root);
 }
