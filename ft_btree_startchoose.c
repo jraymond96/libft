@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 02:37:23 by jraymond          #+#    #+#             */
-/*   Updated: 2018/04/17 06:11:37 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/04/18 03:28:08 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,14 @@
 #include "/Users/jraymond/ft_ls/ft_ls.h"
 
 t_btree	*ft_found_place(t_btree *elem, void *data, int *i, t_btree *parent)
-{	
+{
 	while (elem)
 	{
+		parent = elem;
 		*i = ft_strcmp((char *)data, elem->ptrdata);
 		elem = (*i < 0) ? (t_btree *)elem->left : (t_btree *)elem->right;
-		if (!elem)
-		{
-			elem = parent;
-			break;
-		}
-		parent = elem;
 	}
+	elem = parent;
 	return (elem);
 }
 
@@ -38,9 +34,11 @@ void ft_left(t_btree *elem, void *data, size_t size_data, int *i)
 		elem->left = (struct s_btree *)ft_newbtree(data, size_data);
 	else
 	{
-		elem = elem->left;
-		elem = ft_found_place(elem, data, i, parent);
-		if (i < 0)
+		if (!(elem = elem->left))
+			elem = parent;
+		else
+			elem = ft_found_place(elem, data, i, parent);
+		if (*i < 0)
 			elem->left = (struct s_btree *)ft_newbtree(data, size_data);
 		else
 			elem->right = (struct s_btree *)ft_newbtree(data, size_data);
@@ -57,9 +55,11 @@ void ft_right(t_btree *elem, void *data, size_t size_data, int *i)
 		elem->right = (struct s_btree *)ft_newbtree(data, size_data);
 	else
 	{
-		elem = elem->right;
-		elem = ft_found_place(elem, data, i, parent);
-		if (i < 0)
+		if (!(elem = elem->right))
+			elem = parent;
+		else
+			elem = ft_found_place(elem, data, i, parent);
+		if (*i < 0)
 			elem->left = (struct s_btree *)ft_newbtree(data, size_data);
 		else
 			elem->right = (struct s_btree *)ft_newbtree(data, size_data);
@@ -81,10 +81,7 @@ t_btree	*ft_btree_start(t_btree *root, void *data, size_t size_data, int branch)
 	else
 		elem = root;
 	if (branch == 0)
-	{
-		ft_putstr("tac\n");
 		ft_left(elem, data, size_data, &i);
-	}
 	else
 		ft_right(elem, data, size_data, &i);
 	return (root);

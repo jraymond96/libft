@@ -6,7 +6,7 @@
 #    By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 18:29:20 by jraymond          #+#    #+#              #
-#    Updated: 2018/04/17 02:37:50 by jraymond         ###   ########.fr        #
+#    Updated: 2018/04/18 01:59:33 by jraymond         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,7 @@ SRCS = ft_memset.c \
 				ft_btreeinser_ascii.c \
 				ft_btreedel.c \
 				ft_ilen.c \
-				ft_btree_startchoose.c
+				ft_btree_startchoose.c \
 
 OBJ = $(SRCS:.c=.o)
 
