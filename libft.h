@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 18:29:51 by jraymond          #+#    #+#             */
-/*   Updated: 2018/04/18 06:15:48 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/04/19 04:40:13 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,5 +123,7 @@ void					ft_btreedel(t_btree **root, void (*btdel)(void *));
 int						ft_ilen(int nb);
 t_btree					*ft_btree_start(t_btree *root, void *data,
 										size_t size_data, int branch);
+t_btree					*ft_btreeend(t_btree *root, int min_max);
+t_list					*ft_lstrev(t_list *begin);
 
 #endif

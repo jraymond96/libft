@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd.c                                        :+:      :+:    :+:   */
+/*   ft_btreeend.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/16 15:36:40 by jraymond          #+#    #+#             */
-/*   Updated: 2018/04/19 00:56:15 by jraymond         ###   ########.fr       */
+/*   Created: 2018/04/18 23:52:01 by jraymond          #+#    #+#             */
+/*   Updated: 2018/04/19 00:09:44 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	min_max : -1 for get max value and 1 for get min vale of binary tree
+*/
+
 #include "libft.h"
 
-void	ft_lstadd(t_list **alst, t_list *new)
+t_btree	*ft_btreeend(t_btree *root, int min_max)
 {
-	if (new && new)
+	if (min_max == -1)
 	{
-		new->next = *alst;
-		*alst = new;
+		while (root->left)
+			root = root->left;
 	}
+	else
+	{
+		while (root->right)
+			root = root->right;
+	}
+	return (root);
 }
