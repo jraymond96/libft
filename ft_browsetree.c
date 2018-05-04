@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_btreeend.c                                      :+:      :+:    :+:   */
+/*   ft_browsetree.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/04/18 23:52:01 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/02 19:29:35 by jraymond         ###   ########.fr       */
+/*   Created: 2018/05/04 15:28:31 by jraymond          #+#    #+#             */
+/*   Updated: 2018/05/04 17:17:16 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-**	min_max : -1 for get max value and 1 for get min vale of binary tree
-*/
-
 #include "libft.h"
 
-t_btree	*ft_btreeend(t_btree *root, int min_max)
+void	ft_browsetree(t_btree *root, void (*dothings)(void *))
 {
-	if (min_max == -1)
-	{
-		while (root->left)
-			root = root->left;
-	}
-	else
-	{
-		while (root->right)
-			root = root->right;
-	}
-	return (root);
+	if (!root)
+		return ;
+	if (root->left)
+		ft_browsetree(root->left, dothings);
+	dothings(root->ptrdata);
+	if (root->right)
+		ft_browsetree(root->right, dothings);
 }
