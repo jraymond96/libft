@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 18:29:51 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/09 04:29:44 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/09 23:14:29 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ void					ft_lstdelone(t_list **alst,
 										void (*del)(void *, size_t));
 void					ft_lstdel(t_list**alst, void(*del)(void*, size_t));
 t_list					*ft_lstnew(void const *content, size_t content_size);
+t_list					*ft_lstnewnocpy(void const *content,
+											size_t content_size);
 void					*ft_memset(void *s, int c, size_t n);
 void					ft_bzero(void *s, size_t n);
 void					*ft_memcpy(void *dest, const void *src, size_t n);
@@ -125,7 +127,7 @@ t_btree					*ft_btree_start(t_btree *root, void *data,
 										size_t size_data, int branch);
 t_btree					*ft_btreeend(t_btree *root, int min_max);
 t_list					*ft_lstrev(t_list *begin);
-t_list					*ft_lst_sort(t_list *b_list);
+t_list					*ft_lst_sort(t_list *b_list, int (cmp)(t_list *));
 void					ft_browsetree(t_btree *root, void (*dothings)(void *));
 t_btree					*ft_btreeinser(t_btree *root, void *data,
 							size_t size_data, int (comp)(void *, void *));
