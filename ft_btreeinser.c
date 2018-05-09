@@ -6,15 +6,19 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 17:22:55 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/04 19:05:00 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/09 04:27:47 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*
+** comp is a ptr fonct for choose type of insertion in tree;
+*/
+
 t_btree	*ft_btreeinser(t_btree *root, void *data, size_t size_data,
-	   					int (comp)(void *, void*))
-{	
+						int (comp)(void *, void*))
+{
 	t_btree	*elem;
 	t_btree	*parent;
 	int		i;
@@ -29,7 +33,7 @@ t_btree	*ft_btreeinser(t_btree *root, void *data, size_t size_data,
 		if (!elem)
 		{
 			elem = parent;
-			break;
+			break ;
 		}
 		parent = elem;
 	}

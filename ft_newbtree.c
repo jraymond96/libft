@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/30 19:18:10 by jraymond          #+#    #+#             */
-/*   Updated: 2018/04/17 05:16:08 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/09 04:22:05 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@ t_btree	*ft_creat_belem(void)
 	t_btree	*new;
 	size_t	size;
 
-	if (!(new = (t_btree *)malloc((size = sizeof(t_btree)))))
+	size = sizeof(t_btree);
+	if (!(new = (t_btree *)malloc(size)))
 		return (NULL);
 	ft_bzero(new, size);
 	return (new);
 }
 
-t_btree *ft_newbtree(void const *data, size_t size_data)
+t_btree	*ft_newbtree(void const *data, size_t size_data)
 {
 	t_btree	*new;
 

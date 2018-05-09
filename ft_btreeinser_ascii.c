@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/30 19:14:45 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/05 19:23:32 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/09 04:24:28 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_btree	*ft_btreeinser_ascii(t_btree *root, void *data, size_t size_data)
 		if (!elem)
 		{
 			elem = parent;
-			break;
+			break ;
 		}
 		parent = elem;
 	}
@@ -40,7 +40,6 @@ t_btree	*ft_btreeinser_ascii(t_btree *root, void *data, size_t size_data)
 	elem->parent = (struct s_btree *)parent;
 	return (root);
 }
-
 
 t_btree	*ft_btreeinser_int(t_btree *root, void *data, size_t size_data)
 {
@@ -58,7 +57,7 @@ t_btree	*ft_btreeinser_int(t_btree *root, void *data, size_t size_data)
 		if (!elem)
 		{
 			elem = parent;
-			break;
+			break ;
 		}
 		parent = elem;
 	}

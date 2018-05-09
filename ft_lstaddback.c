@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 17:11:42 by jraymond          #+#    #+#             */
-/*   Updated: 2018/03/28 11:21:14 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/09 04:22:28 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_lstaddback(t_list **begin_lst, t_list *new)
 		if (new)
 		{
 			while (elem->next)
-				elem = elem->next;	
+				elem = elem->next;
 		}
 		elem->next = new;
 	}

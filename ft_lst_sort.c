@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 08:40:59 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/01 17:45:21 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/09 04:23:09 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 t_list	*ft_swap(t_list **beginlst, t_list *elem, t_list *parent)
 {
 	t_list	*tmp;
-			
+
 	tmp = elem->next;
 	elem->next = tmp->next;
 	tmp->next = elem;
@@ -24,7 +24,6 @@ t_list	*ft_swap(t_list **beginlst, t_list *elem, t_list *parent)
 		parent->next = tmp;
 	else
 		*beginlst = tmp;
-
 	return (*beginlst);
 }
 

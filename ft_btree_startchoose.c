@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 02:37:23 by jraymond          #+#    #+#             */
-/*   Updated: 2018/04/21 09:15:34 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/09 04:25:33 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ t_btree	*ft_found_place(t_btree *elem, void *data, int *i, t_btree *parent)
 	return (elem);
 }
 
-void ft_left(t_btree *elem, void *data, size_t size_data, int *i)
+void	ft_left(t_btree *elem, void *data, size_t size_data, int *i)
 {
 	t_btree	*parent;
-	
+
 	parent = elem;
 	if (!elem->left)
 		elem->left = (struct s_btree *)ft_newbtree(data, size_data);
@@ -46,10 +46,10 @@ void ft_left(t_btree *elem, void *data, size_t size_data, int *i)
 	}
 }
 
-void ft_right(t_btree *elem, void *data, size_t size_data, int *i)
+void	ft_right(t_btree *elem, void *data, size_t size_data, int *i)
 {
 	t_btree	*parent;
-	
+
 	parent = elem;
 	if (!elem->right)
 		elem->right = (struct s_btree *)ft_newbtree(data, size_data);

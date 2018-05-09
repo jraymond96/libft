@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 18:29:51 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/04 17:47:30 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/09 04:29:44 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ typedef struct			s_btree
 {
 	void				*ptrdata;
 	size_t				data_size;
-	struct	s_btree		*parent;
-	struct	s_btree		*left;
-	struct	s_btree		*right;
+	struct s_btree		*parent;
+	struct s_btree		*left;
+	struct s_btree		*right;
 }						t_btree;
 
 t_list					*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
@@ -118,7 +118,7 @@ t_btree					*ft_btreeinser_ascii(t_btree *root, void *data,
 						size_t size_data);
 t_btree					*ft_btreeinser_int(t_btree *root, void *data,
 						size_t size_data);
-t_btree 				*ft_newbtree(void const *data, size_t size_data);
+t_btree					*ft_newbtree(void const *data, size_t size_data);
 void					ft_btreedel(t_btree **root, void (*btdel)(void *));
 int						ft_ilen(int nb);
 t_btree					*ft_btree_start(t_btree *root, void *data,
