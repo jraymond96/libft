@@ -6,18 +6,20 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/18 23:52:01 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/02 19:29:35 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/09 06:18:50 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-**	min_max : -1 for get max value and 1 for get min vale of binary tree
+**	min_max : -1 for get min value and other for get max value of binary tree
 */
 
 #include "libft.h"
 
 t_btree	*ft_btreeend(t_btree *root, int min_max)
 {
+	if (!root)
+		return (NULL);
 	if (min_max == -1)
 	{
 		while (root->left)
