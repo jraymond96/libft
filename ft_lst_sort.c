@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/22 08:40:59 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/09 22:44:56 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/10 00:59:10 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ t_list	*ft_lst_sort(t_list *b_list, int (cmp)(t_list *))
 	parent = NULL;
 	while (elem->next)
 	{
-		if (cmp(elem) > 0)
+		if (cmp(elem) < 0)
 		{
 			elem = ft_swap(&b_list, elem, parent);
 			parent = NULL;
