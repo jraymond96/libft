@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/11 23:31:20 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/13 04:24:34 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/14 07:03:09 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,7 @@ int		ft_get_opt(char **argv, int *flags, int (bin)(char *, int, int, int))
 		else
 			return (0);
 	}
+	if (ret == -1)
+		return (0);
 	return (ret);
 }
