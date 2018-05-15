@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 18:29:51 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/13 07:11:56 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/15 07:06:31 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,7 +127,8 @@ t_btree					*ft_btreeend(t_btree *root, int min_max);
 t_list					*ft_lstrev(t_list *begin);
 t_list					*ft_lst_sort(t_list *b_list, int (cmp)(t_list *));
 void					ft_browsetree(t_btree *root, void (*dothings)(void *));
-void					ft_revbrowsetree(t_btree *root, void (*dothings)(void *));
+void					ft_revbrowsetree(t_btree *root,
+											void (*dothings)(void *));
 t_btree					*ft_btreeinser(t_btree *root, void *data,
 							size_t size_data, int (comp)(void *, void *));
 int						ft_get_opt(char **argv, int *flags, int (bin)(char *,
