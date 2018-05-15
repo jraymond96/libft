@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/11 23:31:20 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/14 07:03:09 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/05/15 02:28:20 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		is_opt(char *argv)
 		return (-1);
 	if (argv[0] == '-')
 	{
-		if (argv[1] == '-')
+		if (argv[1] == '-' && ft_strlen(argv) == 2)
 			return (2);
 		else
 			return (1);
