@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:40:33 by jraymond          #+#    #+#             */
-/*   Updated: 2017/11/14 18:40:37 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/06/04 19:26:33 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,6 @@ char			**ft_strsplit(char const *s, char c)
 		while (*s && *s == c)
 			s++;
 	}
-	s1[i] = 0;
+	s1[i] = NULL;
 	return (s1);
 }

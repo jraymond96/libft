@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstaddback.c                                    :+:      :+:    :+:   */
+/*   ft_lstrmelem.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/27 17:11:42 by jraymond          #+#    #+#             */
-/*   Updated: 2018/06/13 04:15:42 by jraymond         ###   ########.fr       */
+/*   Created: 2018/06/08 16:54:36 by jraymond          #+#    #+#             */
+/*   Updated: 2018/06/08 17:14:28 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstaddback(t_list **begin_lst, t_list *new)
+t_list	*ft_lstrmelem(t_list *begin_list, t_list *elem)
 {
-	t_list	*elem;
+	t_list	*el;
+	t_list	*next;
 
-	elem = *begin_lst;
-	if (!*begin_lst)
-		*begin_lst = new;
-	else
+	el = begin_list;
+	if (!begin_list || !elem)
+		return (NULL);
+	if (elem == begin_list)
 	{
-		if (new)
-		{
-			while (elem->next)
-				elem = elem->next;
-		}
-		elem->next = new;
+		elem = elem->next;
+		free(begin_list);
+		return (elem);
 	}
+	while (el->next != elem && el)
+		el = el->next;
+	if (!el)
+		return (NULL);
+	next = elem->next;
+	free(elem);
+	el->next = next;
+	return (begin_list);
 }

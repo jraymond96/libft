@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 18:29:51 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/15 07:06:31 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/06/08 17:00:58 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,8 +52,8 @@ void					ft_lstdelone(t_list **alst,
 										void (*del)(void *, size_t));
 void					ft_lstdel(t_list**alst, void(*del)(void*, size_t));
 t_list					*ft_lstnew(void const *content, size_t content_size);
-t_list					*ft_lstnewnocpy(void const *content,
-											size_t content_size);
+t_list					*ft_lstnewnocpy(void const *content);
+t_list					*ft_lstrmelem(t_list *begin_lst, t_list *elem);
 void					*ft_memset(void *s, int c, size_t n);
 void					ft_bzero(void *s, size_t n);
 void					*ft_memcpy(void *dest, const void *src, size_t n);
@@ -134,5 +134,6 @@ t_btree					*ft_btreeinser(t_btree *root, void *data,
 int						ft_get_opt(char **argv, int *flags, int (bin)(char *,
 									int, int, int));
 int						ft_btreelen(t_btree *root, int *i);
+int						get_next_line(const int fd, char **line);
 
 #endif
