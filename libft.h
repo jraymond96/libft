@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 18:29:51 by jraymond          #+#    #+#             */
-/*   Updated: 2018/06/08 17:00:58 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/06/15 07:47:58 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ t_list					*ft_lstnewnocpy(void const *content);
 t_list					*ft_lstrmelem(t_list *begin_lst, t_list *elem);
 void					*ft_memset(void *s, int c, size_t n);
 void					ft_bzero(void *s, size_t n);
+char					**ft_memsplit(char *str, size_t size);
 void					*ft_memcpy(void *dest, const void *src, size_t n);
 void					*ft_memccpy(void *dest, const void *src,
 									int c, size_t n);
@@ -65,6 +66,7 @@ void					ft_putstr(char const *str);
 void					*ft_memmove(void *dest, const void *src, size_t n);
 void					*ft_memchr(const void *s, int c, size_t n);
 int						ft_memcmp(const void *s1, const void *s2, size_t n);
+void					*ft_malloc(size_t size);
 char					*ft_strdup(const char *s);
 char					*ft_strcpy(char *dest, const char *src);
 char					*ft_strncpy(char *dest, const char *src, size_t n);
@@ -87,6 +89,7 @@ int						ft_toupper(int c);
 int						ft_tolower(int c);
 void					*ft_memalloc(size_t size);
 void					ft_memdel(void **ap);
+char					*ft_memdup(char	*str, size_t len);
 char					*ft_strnew(size_t size);
 void					ft_strdel(char **as);
 void					ft_strclr(char *s);
