@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/04 17:22:55 by jraymond          #+#    #+#             */
-/*   Updated: 2018/05/16 18:29:35 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/06/02 21:42:14 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ t_btree	*ft_btreeinser(t_btree *root, void *data, size_t size_data,
 
 	if (!(elem = root))
 		return (ft_newbtree(data, size_data));
-	parent = root;
+	if (!(parent = root) && !comp)
+		return (NULL);
 	while (elem)
 	{
 		i = comp(data, elem->ptrdata);
