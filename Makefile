@@ -6,7 +6,7 @@
 #    By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 18:29:20 by jraymond          #+#    #+#              #
-#    Updated: 2018/06/15 07:44:36 by jraymond         ###   ########.fr        #
+#    Updated: 2018/06/18 13:58:19 by jraymond         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,7 +95,9 @@ SRCS = ft_memset.c \
 				ft_lstrmelem.c \
 				ft_memdup.c \
 				ft_malloc.c \
-				ft_memsplit.c
+				ft_memsplit.c \
+				ft_strclen.c \
+				ft_strmidjoin.c
 
 OBJ = $(SRCS:.c=.o)
 

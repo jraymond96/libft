@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 21:20:24 by jraymond          #+#    #+#             */
-/*   Updated: 2017/11/16 16:35:20 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/06/18 17:19:27 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlen(const char *s)
 	int i;
 
 	i = 0;
+	if (!s)
+		return (0);
 	while (*s)
 	{
 		s++;

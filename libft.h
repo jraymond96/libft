@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 18:29:51 by jraymond          #+#    #+#             */
-/*   Updated: 2018/06/15 07:47:58 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/06/18 13:56:01 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void					*ft_memcpy(void *dest, const void *src, size_t n);
 void					*ft_memccpy(void *dest, const void *src,
 									int c, size_t n);
 size_t					ft_strlen(const char *s);
+size_t					ft_strclen(char *str, char c);
 void					ft_putchar(char c);
 void					ft_putstr(char const *str);
 void					*ft_memmove(void *dest, const void *src, size_t n);
@@ -137,6 +138,8 @@ t_btree					*ft_btreeinser(t_btree *root, void *data,
 int						ft_get_opt(char **argv, int *flags, int (bin)(char *,
 									int, int, int));
 int						ft_btreelen(t_btree *root, int *i);
+char					*ft_strmidjoin(char const *s1, char const *s2,
+											char *middle);
 int						get_next_line(const int fd, char **line);
 
 #endif
