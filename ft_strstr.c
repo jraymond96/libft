@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/13 14:55:27 by jraymond          #+#    #+#             */
-/*   Updated: 2017/11/15 17:15:03 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/06/20 09:17:36 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@ char	*ft_strstr(const char *str, const char *to_find)
 	int		k;
 
 	i = 0;
+	if (!to_find || !str)
+		return (NULL);
 	if (to_find[0] == '\0')
-		return ((char*)str);
+		return ((char*)&str[i]);
 	while (str[i] != '\0')
 	{
 		j = i;
@@ -34,5 +36,5 @@ char	*ft_strstr(const char *str, const char *to_find)
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
