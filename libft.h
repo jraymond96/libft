@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 18:29:51 by jraymond          #+#    #+#             */
-/*   Updated: 2018/06/18 13:56:01 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/06/25 18:49:01 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,5 +141,7 @@ int						ft_btreelen(t_btree *root, int *i);
 char					*ft_strmidjoin(char const *s1, char const *s2,
 											char *middle);
 int						get_next_line(const int fd, char **line);
+void					ft_mem2join(char *dest, char *s1, char *s2,
+											size_t size);
 
 #endif

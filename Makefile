@@ -6,7 +6,7 @@
 #    By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 18:29:20 by jraymond          #+#    #+#              #
-#    Updated: 2018/06/21 16:36:38 by jraymond         ###   ########.fr        #
+#    Updated: 2018/06/25 18:47:14 by jraymond         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRCS = ft_memset.c \
 				ft_memmove.c \
 				ft_memchr.c \
 				ft_memcmp.c \
+				ft_mem2join.c \
 				ft_strdup.c \
 				ft_strcpy.c \
 				ft_strncpy.c \
