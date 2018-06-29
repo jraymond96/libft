@@ -6,12 +6,11 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/15 07:15:21 by jraymond          #+#    #+#             */
-/*   Updated: 2018/06/27 17:03:58 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/06/29 17:58:16 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int		nb_of_words(char *str, int size)
 {
@@ -69,7 +68,7 @@ char	**ft_memsplit(char *str, size_t size)
 
 	i = size;
 	words = nb_of_words(str, --size);
-	if (!(new = ft_malloc(sizeof(char *) * (words + 1))))
+	if (!(new = (char**)ft_malloc(sizeof(char *) * (words + 1))))
 		return (NULL);
 	new[words] = NULL;
 	while (--words >= 0)
