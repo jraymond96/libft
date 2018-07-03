@@ -6,7 +6,7 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/15 07:15:21 by jraymond          #+#    #+#             */
-/*   Updated: 2018/06/29 17:58:16 by jraymond         ###   ########.fr       */
+/*   Updated: 2018/07/03 05:08:43 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ int		handle_word(char *str, char **new, int size)
 	int	len;
 
 	while (size > 0 && (str[size] == ' ' || str[size] == '\t' ||
-			   str[size] == '\n'))
+			str[size] == '\n'))
 		size--;
 	len = 0;
 	while (size > 0 && str[size] != ' ' && str[size] != '\t' &&
-			   str[size] != '\n')
+			str[size] != '\n')
 	{
 		size--;
 		len++;
