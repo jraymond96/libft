@@ -6,7 +6,7 @@
 /*   By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 18:29:51 by jraymond          #+#    #+#             */
-/*   Updated: 2018/06/25 18:49:01 by jraymond         ###   ########.fr       */
+/*   Updated: 2020/02/07 17:53:01 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ char					*ft_strstr(const char *meule_de_foin,
 int						ft_strcmp(const char *s1, const char *s2);
 int						ft_strncmp(const char *s1, const char *s2, size_t n);
 int						ft_atoi(const char *str);
+void					ft_decimal_to_hexa(long number, char *res);
 int						ft_isalpha(int c);
 int						ft_isdigit(int c);
 int						ft_isalnum(int c);
@@ -107,6 +108,7 @@ char					*ft_strjoin(char const *s1, char const *s2);
 char					*ft_strtrim(char const *s);
 char					**ft_strsplit(char const *s, char c);
 char					*ft_itoa(int n);
+char					*ft_itoa_nomalloc(int n, char *buf);
 void					ft_putendl(char const *s);
 void					ft_putnbr(int n);
 void					ft_putchar_fd(char c, int fd);

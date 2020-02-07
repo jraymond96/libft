@@ -6,7 +6,7 @@
 #    By: jraymond <jraymond@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/10 18:29:20 by jraymond          #+#    #+#              #
-#    Updated: 2018/07/03 05:08:37 by jraymond         ###   ########.fr        #
+#    Updated: 2020/02/07 16:53:26 by jraymond         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,7 @@ SRCS = ft_memset.c \
 				ft_strtrim.c \
 				ft_strsplit.c \
 				ft_itoa.c \
+				ft_itoa_no_malloc.c \
 				ft_putendl.c \
 				ft_putnbr.c \
 				ft_putchar_fd.c \
@@ -99,6 +100,7 @@ SRCS = ft_memset.c \
 				ft_memsplit.c \
 				ft_strclen.c \
 				ft_strmidjoin.c \
+				ft_decimal_to_hexa.c \
 
 OBJ = $(SRCS:.c=.o)
 
