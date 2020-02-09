@@ -6,13 +6,13 @@
 /*   By: jraymond <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 18:02:13 by jraymond          #+#    #+#             */
-/*   Updated: 2020/02/07 17:52:51 by jraymond         ###   ########.fr       */
+/*   Updated: 2020/02/08 13:47:44 by jraymond         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			malloc_size(int	*modulos)
+int			malloc_size(int *modulos)
 {
 	int		malloc_size;
 
@@ -22,7 +22,6 @@ int			malloc_size(int	*modulos)
 		malloc_size++;
 		modulos++;
 	}
-
 	return (malloc_size + 1);
 }
 
