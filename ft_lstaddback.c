@@ -16,11 +16,13 @@ void	ft_lstaddback(t_list **begin_lst, t_list *new)
 {
 	t_list	*elem;
 
-	elem = *begin_lst;
+	if (!begin_lst)
+		return ;
 	if (!*begin_lst)
 		*begin_lst = new;
 	else
 	{
+		elem = *begin_lst;
 		if (new)
 		{
 			while (elem->next)
