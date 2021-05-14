@@ -11,13 +11,14 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	t_list	*temp;
 	t_list	*last;
 
-	if (alst == NULL)
+	if (alst == NULL || *alst == NULL)
 		return ;
 	last = *alst;
 	while (last != NULL)

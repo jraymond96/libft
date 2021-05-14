@@ -11,14 +11,19 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
+	t_list	*curr;
+
 	if (!f || !lst)
 		return ;
-	while (lst)
+
+	curr = lst;
+	while (curr)
 	{
-		f(lst);
-		lst = lst->next;
+		f(curr);
+		curr = curr->next;
 	}
 }
