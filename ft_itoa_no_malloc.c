@@ -39,7 +39,7 @@ static int		ft_sign(int n)
 	return (0);
 }
 
-char			*ft_itoa_nomalloc(long n, char *buf)
+char			*ft_itoa_no_malloc(long n, char *buf)
 {
 	long	n_lenght;
 	long	len;
