@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
@@ -25,6 +24,25 @@ void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 	{
 		temp = last->next;
 		ft_lstdelone(&last, del);
+		last = temp;
+	}
+	*alst = NULL;
+}
+
+
+void	ft_lstdelnocontent(t_list **alst)
+{
+	t_list	*temp;
+	t_list	*last;
+
+	if (alst == NULL || *alst == NULL)
+		return ;
+
+	last = *alst;
+	while (last != NULL)
+	{
+		temp = last->next;
+		ft_memdel((void **)&last);
 		last = temp;
 	}
 	*alst = NULL;

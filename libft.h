@@ -51,6 +51,7 @@ void					ft_lstaddback(t_list **begin_lst, t_list *new);
 void					ft_lstdelone(t_list **alst,
 										void (*del)(void *, size_t));
 void					ft_lstdel(t_list**alst, void(*del)(void*, size_t));
+void					ft_lstdelnocontent(t_list **alst);
 t_list					*ft_lstnew(void const *content, size_t content_size);
 t_list					*ft_lstnewnocpy(void const *content);
 t_list					*ft_lstrmelem(t_list *begin_lst, t_list *elem);
